@@ -1,0 +1,3 @@
+gene-disease, resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
+gene-miRNA, resources/edge_data/gene-miRNA_TarBase_v8_download.txt
+miRNA-disease, resources/edge_data/miRNA-disease_mir2Disease.txt

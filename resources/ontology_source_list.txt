@@ -1,0 +1,3 @@
+mondo, resources/ontologies/mondo_with_imports.owl
+ncro, resources/ontologies/ncro_with_imports.owl
+ro, resources/ontologies/ro_with_imports.owl
