@@ -5,6 +5,18 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 
+<gene-gene-map>
+    a rr:TriplesMap;
+
+  rml:logicalSource [
+    rml:source "./files/gene-gene-map.csv";
+    rml:referenceFormulation ql:CSV
+  ];
+  rr:subjectMap [
+    rr:template "http://purl.obolibrary.org/obo/{entrez}";
+    rr:class obo:MONDO_0700096;
+  ].
+
 <gene-disease>
   a rr:TriplesMap;
 
@@ -39,73 +51,70 @@
     rr:class obo:MONDO_0700096;
   ].
 
+<gene-miRNA>
+  a rr:TriplesMap;
 
-
-  <gene-miRNA>
-    a rr:TriplesMap;
-
-    rml:logicalSource [
-      rml:source "./files/gene-miRNA.csv";
+  rml:logicalSource [
+    rml:source "./files/gene-miRNA.csv";
       rml:referenceFormulation ql:CSV
-    ];
-    rr:subjectMap [
-      rr:template "http://www.ncbi.nlm.nih.gov/gene/{gene}";
+  ];
+  rr:subjectMap [
+    rr:template "http://www.ncbi.nlm.nih.gov/gene/{gene}";
       rr:class obo:SO_0000704;
+  ];
+  rr:predicateObjectMap [
+    rr:predicate obo:RO_0002434;
+    rr:objectMap [
+      rr:parentTriplesMap <mirbase-ncro-map>;
+      rr:joinCondition [
+        rr:child "mirna";
+        rr:parent "mirbase";
+      ];
     ];
-    rr:predicateObjectMap [
-      rr:predicate obo:RO_0002434;
-      rr:objectMap [
-        rr:parentTriplesMap <mirbase-ncro-map>;
-        rr:joinCondition [
-          rr:child "mirna";
-          rr:parent "mirbase";
-        ];
+  ].
+
+<mirbase-ncro-map>
+  a rr:TriplesMap;
+
+  rml:logicalSource [
+    rml:source "./files/MIRBASE_ID_NCRO_MAP.csv";
+    rml:referenceFormulation ql:CSV
+  ];
+  rr:subjectMap [
+    rr:template "http://purl.obolibrary.org/obo/{ncro}";
+    rr:class obo:SO_0000276;
+  ].
+
+<miRNA-disease>
+  a rr:TriplesMap;
+
+  rml:logicalSource [
+    rml:source "./files/mirna-disease.csv";
+    rml:referenceFormulation ql:CSV
+  ];
+  rr:subjectMap [
+    rr:template "http://purl.obolibrary.org/obo/{ncro}";
+    rr:class obo:SO_0000276
+  ];
+  rr:predicateObjectMap [
+    rr:predicate obo:RO_0003302;
+    rr:objectMap [
+      rr:parentTriplesMap <doid-mondo-map>;
+      rr:joinCondition [
+        rr:child "doid";
+        rr:parent "doid";
       ];
-    ].
+    ];
+  ].
 
-    <mirbase-ncro-map>
-      a rr:TriplesMap;
+<doid-mondo-map>
+  a rr:TriplesMap;
 
-      rml:logicalSource [
-        rml:source "./files/MIRBASE_ID_NCRO_MAP.csv";
-        rml:referenceFormulation ql:CSV
-      ];
-      rr:subjectMap [
-        rr:template "http://purl.obolibrary.org/obo/{ncro}";
-        rr:class obo:SO_0000276;
-      ].
-
-
-      <miRNA-disease>
-        a rr:TriplesMap;
-
-        rml:logicalSource [
-          rml:source "./files/mirna-disease.csv";
-          rml:referenceFormulation ql:CSV
-        ];
-        rr:subjectMap [
-          rr:template "http://purl.obolibrary.org/obo/{ncro}";
-          rr:class obo:SO_0000276
-        ];
-        rr:predicateObjectMap [
-          rr:predicate obo:RO_0003302;
-          rr:objectMap [
-            rr:parentTriplesMap <doid-mondo-map>;
-            rr:joinCondition [
-              rr:child "doid";
-              rr:parent "doid";
-            ];
-          ];
-        ].
-
-        <doid-mondo-map>
-          a rr:TriplesMap;
-
-          rml:logicalSource [
-            rml:source "./files/DOID_MONDO_MAP.csv";
-            rml:referenceFormulation ql:CSV
-          ];
-          rr:subjectMap [
-            rr:template "http://purl.obolibrary.org/obo/{disease}";
-            rr:class obo:MONDO_0700096
-          ].
+  rml:logicalSource [
+    rml:source "./files/DOID_MONDO_MAP.csv";
+    rml:referenceFormulation ql:CSV
+  ];
+  rr:subjectMap [
+    rr:template "http://purl.obolibrary.org/obo/{disease}";
+    rr:class obo:MONDO_0700096
+  ].
