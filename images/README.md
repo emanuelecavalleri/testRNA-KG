@@ -4,3 +4,5 @@
 ![rdf-grapher-1](https://user-images.githubusercontent.com/33032169/229295644-f50cdc40-f13b-4d45-8f81-9f7fde625ffb.png)
 
 ![rdf-grapher-2](https://user-images.githubusercontent.com/33032169/229296239-9a8196ea-c483-4c8c-81de-f7036f4b12fc.png)
+
+<img width="1629" alt="Screenshot 2023-04-17 alle 13 21 14" src="https://user-images.githubusercontent.com/33032169/232470062-4dd148ef-b389-4b84-b183-b4d38e5ac788.png">
