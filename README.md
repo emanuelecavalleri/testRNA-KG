@@ -6,4 +6,4 @@ This repository contains notebooks, data, and ontologies to build a simplified R
 
 The main notebook can be viewed at https://nbviewer.org/github/emanuelecavalleri/testRNA-KG/blob/main/main.ipynb.
 
-Public SPARQL endpoint: http://fievel.anacleto.di.unimi.it:10035/#/repositories/KG-RNA.
+Public SPARQL endpoint: http://fievel.anacleto.di.unimi.it:10035/#/repositories/RNA-KG.
