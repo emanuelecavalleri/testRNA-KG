@@ -1,3 +1,3 @@
 gene-disease|;;|entity-class|RO_0003302|http://www.ncbi.nlm.nih.gov/gene/|http://purl.obolibrary.org/obo/|t|0;4|1:./resources/processed_data/DISEASE_MONDO_MAP.txt|10;>=;1.0|None
-gene-miRNA|;;|entity-entity|RO_0002434|http://www.ncbi.nlm.nih.gov/gene/|http://purl.obolibrary.org/obo/|t|0;2|0:./resources/processed_data/ENSEMBL_GENE_ENTREZ_GENE_MAP.txt;1:./resources/processed_data/hsa_NCRO_Map.txt|None|None
-miRNA-disease|;;|entity-class|RO_0003302|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|2;1|0:./resources/processed_data/hsa_NCRO_Map.txt;1:./resources/processed_data/DOID_MONDO_MAP.txt|None|None
+gene-miRNA|;;|entity-class|RO_0002434|http://www.ncbi.nlm.nih.gov/gene/|http://purl.obolibrary.org/obo/|t|0;2|0:./resources/processed_data/ENSEMBL_GENE_ENTREZ_GENE_MAP.txt;1:./resources/processed_data/MIRBASE_ID_NCRO_MAP.txt|None|None
+miRNA-disease|;;|class-class|RO_0003302|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|1;0|0:./resources/processed_data/MIRBASE_ID_NCRO_MAP.txt;1:./resources/processed_data/DISEASE_DOID_MONDO_Map.txt|None|None
