@@ -1,37 +1,15 @@
 ===================================
-#Tue Oct 10 18:20:15 UTC 2023 
+#Tue Oct 10 13:16:01 UTC 2023 
 ===================================
 
 EDGE: gene-disease
 DATA PROCESSING INFO
-  - IDENTIFIER MAPPING = disease (./resources/processed_data/DISEASE_MONDO_MAP.txt)
-  - FILTERING CRITERIA = None
-  - EVIDENCE CRITERIA = data[10]>=1.0
-DATA INFO
-  - DOWNLOAD_URL = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
-  - DOWNLOAD_DATE = 10/10/2023
-  - FILE_SIZE_IN_BYTES = 11542996
-  - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
-
-EDGE: miRNA-disease
-DATA PROCESSING INFO
-  - IDENTIFIER MAPPING = miRNA (./resources/processed_data/MIRBASE_ID_NCRO_MAP.txt) | disease (./resources/processed_data/DISEASE_DOID_MONDO_Map.txt)
+  - IDENTIFIER MAPPING = None
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = resources/edge_data/miRNA-disease_miR2Disease.txt
+  - DOWNLOAD_URL = resources/processed_data/gene-disease_curated_gene_disease_associations.tsv
   - DOWNLOAD_DATE = 10/10/2023
-  - FILE_SIZE_IN_BYTES = 478995
-  - DOWNLOADED_FILE_LOCATION = resources/edge_data/miRNA-disease_miR2Disease.txt
-
-EDGE: gene-miRNA
-DATA PROCESSING INFO
-  - IDENTIFIER MAPPING = gene (./resources/processed_data/ENSEMBL_GENE_ENTREZ_GENE_MAP.txt) | miRNA (./resources/processed_data/MIRBASE_ID_NCRO_MAP.txt)
-  - FILTERING CRITERIA = None
-  - EVIDENCE CRITERIA = None
-DATA INFO
-  - DOWNLOAD_URL = resources/edge_data/gene-miRNA_TarBase_v8_download.txt
-  - DOWNLOAD_DATE = 10/10/2023
-  - FILE_SIZE_IN_BYTES = 6426932
-  - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-miRNA_TarBase_v8_download.txt
+  - FILE_SIZE_IN_BYTES = 152
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/gene-disease_curated_gene_disease_associations.tsv
 
