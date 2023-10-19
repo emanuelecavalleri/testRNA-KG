@@ -1,3 +1,2 @@
 disease, resources/ontologies/mondo_with_imports.owl
-miRNA, resources/ontologies/ncro_with_imports.owl
 relation, resources/ontologies/ro_with_imports.owl
