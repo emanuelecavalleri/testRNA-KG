@@ -11,3 +11,5 @@ Public SPARQL endpoint (does not include properties): http://fievel.anacleto.di.
 Public Neo4j endpoint (includes properties): http://fievel.anacleto.di.unimi.it:7474.
 
 Current release of RNA-KG is available and maintained at the following link: https://github.com/AnacletoLAB/RNA-KG.
+
+Data are available at the following link: https://doi.org/10.5281/zenodo.10641075
