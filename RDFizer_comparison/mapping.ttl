@@ -1,21 +1,8 @@
-
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-
-<gene-gene-map>
-    a rr:TriplesMap;
-
-  rml:logicalSource [
-    rml:source "./files/gene-gene-map.csv";
-    rml:referenceFormulation ql:CSV
-  ];
-  rr:subjectMap [
-    rr:template "http://purl.obolibrary.org/obo/{entrez}";
-    rr:class obo:MONDO_0700096;
-  ].
 
 <gene-disease>
   a rr:TriplesMap;
@@ -65,23 +52,23 @@
   rr:predicateObjectMap [
     rr:predicate obo:RO_0002434;
     rr:objectMap [
-      rr:parentTriplesMap <mirbase-ncro-map>;
+      rr:parentTriplesMap <mirnaLabel-mirbase-map>;
       rr:joinCondition [
         rr:child "mirna";
-        rr:parent "mirbase";
+        rr:parent "mirna";
       ];
     ];
   ].
 
-<mirbase-ncro-map>
+<mirnaLabel-mirbase-map>
   a rr:TriplesMap;
 
   rml:logicalSource [
-    rml:source "./files/MIRBASE_ID_NCRO_MAP.csv";
+    rml:source "./files/MIRBASE_ID_ACCESSION_MAP.csv";
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
-    rr:template "http://purl.obolibrary.org/obo/{ncro}";
+    rr:template "https://www.mirbase.org/hairpin/{mirbase}";
     rr:class obo:SO_0000276;
   ].
 
@@ -93,7 +80,7 @@
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
-    rr:template "http://purl.obolibrary.org/obo/{ncro}";
+    rr:template "https://www.mirbase.org/hairpin/{mirbase}";
     rr:class obo:SO_0000276
   ];
   rr:predicateObjectMap [
